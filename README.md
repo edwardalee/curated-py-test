@@ -20,6 +20,18 @@ This repository contains the following:
 
 # Updating the Template Information
 
+## Direct Update
+
+Run the following to update context information from the original sources:
+
+```
+make update
+```
+
+Then commit the changes.
+
+## Update from the Template Repo
+
 If you have created your own repository from this template, and you later wish to update
 the context information to the latest template data, you can do this with the following steps:
 
