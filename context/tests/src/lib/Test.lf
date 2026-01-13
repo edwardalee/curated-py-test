@@ -1,0 +1,14 @@
+target Python
+
+reactor TestDouble(expected = [1.0, 1.0, 1.0, 1.0]) {
+  input inp
+  state count = 0
+
+  reaction(inp) {=
+    print("Received: ", inp.value)
+    if inp.value != self.expected[self.count]:
+      sys.stderr.write("ERROR: Expected {:f}.\n".format(self.expected[self.count]))
+      exit(1)
+    self.count += 1
+  =}
+}

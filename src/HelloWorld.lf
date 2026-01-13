@@ -1,0 +1,104 @@
+/**
+ * Hello World example for Lingua Franca demonstrating key features:
+ * - Timers and periodic execution
+ * - State variables
+ * - Reactors and composition
+ * - Input/output ports and connections
+ * - Reactions triggered by different events
+ * - Startup and shutdown actions
+ * 
+ * This program creates a simple greeting system where:
+ * - A Greeter reactor generates greetings periodically
+ * - A Counter reactor counts and displays messages
+ * - The system runs for 2 seconds
+ */
+target Python {
+  timeout: 2 sec
+}
+
+/**
+ * A reactor that generates greetings at startup and periodically.
+ * Demonstrates: timers, state, startup reaction, outputs.
+ */
+reactor Greeter {
+  // Output port for sending greetings
+  output greeting
+  
+  // Timer that triggers every 500 milliseconds
+  timer t(500 msec, 500 msec)
+  
+  // State variable to track greeting count
+  state count = 0
+  
+  // Reaction at startup - executes once when program begins
+  reaction(startup) -> greeting {=
+    greeting.set("Hello, World! Welcome to Lingua Franca!")
+    print("=== Greeter started ===")
+  =}
+  
+  // Reaction triggered by the periodic timer
+  reaction(t) -> greeting {=
+    self.count += 1
+    if self.count == 1:
+      greeting.set("First periodic greeting!")
+    elif self.count == 2:
+      greeting.set("Second periodic greeting!")
+    else:
+      greeting.set("Greetings from Lingua Franca!")
+  =}
+  
+  // Reaction at shutdown - executes once when program terminates
+  reaction(shutdown) {=
+    print(f"=== Greeter shutting down after {self.count} greetings ===")
+  =}
+}
+
+/**
+ * A reactor that receives and counts messages.
+ * Demonstrates: inputs, state, reactions triggered by inputs.
+ */
+reactor Counter {
+  // Input port for receiving greetings
+  input message
+  
+  // State to track total messages received
+  state total = 0
+  
+  // Reaction triggered when a message is received
+  reaction(message) {=
+    self.total += 1
+    elapsed_ms = lf.time.logical_elapsed() // 1000000  # Convert to milliseconds
+    print(f"[Message #{self.total} at {elapsed_ms} ms] {message.value}")
+  =}
+  
+  reaction(shutdown) {=
+    print(f"=== Counter received {self.total} messages total ===")
+  =}
+}
+
+/**
+ * Main reactor that composes the system.
+ * Demonstrates: reactor instantiation, connections between reactors.
+ * Change `main` to `federated` to get a federated version of the program.
+ */
+federated reactor HelloWorld {
+  // Instantiate the Greeter reactor
+  greeter = new Greeter()
+  
+  // Instantiate the Counter reactor
+  counter = new Counter()
+  
+  // Connect the greeter's output to the counter's input
+  greeter.greeting -> counter.message
+  
+  // Reaction at startup to announce the program.
+  // If the program is federated, this reaction will be executed in both federates.
+  reaction(startup) {=
+    print()
+    print("╔════════════════════════════════════════════╗")
+    print("║  Lingua Franca Hello World Demo            ║")
+    print("║  Demonstrating reactive programming        ║")
+    print("╚════════════════════════════════════════════╝")
+    print()
+  =}
+}
