@@ -1,5 +1,8 @@
 .PHONY: help format clean update
 
+# Directories to exclude from context (e.g., those containing LFS or large files)
+EXCLUDE = audio-classification
+
 # Default target - show help message
 help:
 	@echo "Lingua Franca Curated Python - Available Make Targets:"
@@ -53,6 +56,11 @@ update:
 # lf-demo repo currently contains only C examples, so we don't update it
 #	@echo "======= Updating context from lf-demos repository..."
 #	@./scripts/clone_and_copy_subdir.sh https://github.com/lf-lang/lf-demos.git . context/demos
-	@echo "======= Removing directories containing LFS files..."
-	@./scripts/remove_lfs_dirs.sh
+	@echo "======= Removing excluded directories..."
+	@for name in $(EXCLUDE); do \
+		find context -type d -name "$$name" | while read dir; do \
+			echo "  Removing $$dir"; \
+			rm -rf "$$dir"; \
+		done \
+	done
 	@echo "Context update complete."
