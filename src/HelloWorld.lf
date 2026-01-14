@@ -81,7 +81,7 @@ reactor Counter {
  * Demonstrates: reactor instantiation, connections between reactors.
  * Change `main` to `federated` to get a federated version of the program.
  */
-federated reactor HelloWorld {
+main reactor HelloWorld {
   // Instantiate the Greeter reactor
   greeter = new Greeter()
   
