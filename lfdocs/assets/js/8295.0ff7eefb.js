@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkdocusaurus_classic_typescript=globalThis.webpackChunkdocusaurus_classic_typescript||[]).push([[8295],{8295:s=>{s.exports='target Rust\n\nmain reactor {\n  reaction(startup) {=\n    println!("Hello World.");\n  =}\n}\n'}}]);

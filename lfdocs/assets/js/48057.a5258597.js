@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkdocusaurus_classic_typescript=globalThis.webpackChunkdocusaurus_classic_typescript||[]).push([[48057],{48057:s=>{s.exports='target Python;\nimport Physical from "../Physical.lf";\nmain reactor {\n    timer t(200 msec, 200 msec);\n    p = new Physical();\n    reaction(t) -> p.x {=\n        p.x.set(0)\n    =}\n}'}}]);

@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkdocusaurus_classic_typescript=globalThis.webpackChunkdocusaurus_classic_typescript||[]).push([[95979],{95979:n=>{n.exports="target TypeScript\nreactor Child {\n  reaction(startup) {=\n    console.log(`My bank index ${this.getBankIndex()}`)\n  =}\n}\nreactor Parent {\n  c = new[2] Child()\n}\nmain reactor {\n  p = new[2] Parent()\n}\n"}}]);

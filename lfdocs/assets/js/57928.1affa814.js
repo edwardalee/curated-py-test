@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkdocusaurus_classic_typescript=globalThis.webpackChunkdocusaurus_classic_typescript||[]).push([[57928],{57928:s=>{s.exports='target Rust\n\nmain reactor Timer {\n  timer t(0, 1 sec)\n\n  reaction(t) {=\n    println!(\n        "Logical time is {}.",\n        ctx.get_elapsed_logical_time().as_nanos(),\n    );\n  =}\n}\n'}}]);

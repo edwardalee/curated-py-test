@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkdocusaurus_classic_typescript=globalThis.webpackChunkdocusaurus_classic_typescript||[]).push([[91612],{91612:s=>{s.exports='target Cpp\n\nmain reactor TimeElapsed {\n  timer t(0, 1 s)\n\n  reaction(t) {=\n    std::cout << "Elapsed logical time is " << get_elapsed_logical_time() << std::endl;\n  =}\n}\n'}}]);

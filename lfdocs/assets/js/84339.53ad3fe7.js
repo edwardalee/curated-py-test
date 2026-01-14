@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkdocusaurus_classic_typescript=globalThis.webpackChunkdocusaurus_classic_typescript||[]).push([[84339],{84339:s=>{s.exports='target Python\n\nmain reactor {\n  reaction(startup) {=\n    print("Hello World.")\n  =}\n}\n'}}]);

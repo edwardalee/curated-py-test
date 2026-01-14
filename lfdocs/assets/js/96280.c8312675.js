@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkdocusaurus_classic_typescript=globalThis.webpackChunkdocusaurus_classic_typescript||[]).push([[96280],{96280:s=>{s.exports="target C\n\nreactor Double {\n  input x: int\n  output y: int\n\n  reaction(x) -> y {=\n    lf_set(y, x->value * 2);\n  =}\n}\n"}}]);

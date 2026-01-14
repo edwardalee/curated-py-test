@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkdocusaurus_classic_typescript=globalThis.webpackChunkdocusaurus_classic_typescript||[]).push([[47310],{47310:n=>{n.exports="target C;\nreactor A {\n    output y:int\n}\nreactor B {\n    input x:int\n}\nmain reactor {\n    a = new A()\n    b1 = new B()\n    b2 = new B()\n    a.y -> b1.x\n    a.y -> b2.x\n}"}}]);

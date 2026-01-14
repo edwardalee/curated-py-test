@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkdocusaurus_classic_typescript=globalThis.webpackChunkdocusaurus_classic_typescript||[]).push([[22910],{22910:s=>{s.exports="target Python\n\nreactor MultiportSource(bank_index=0) {\n  timer t(0, 200 msec)\n  output out\n  state s = 0\n\n  reaction(t) -> out {=\n    out.set(self.s)\n    self.s += self.bank_index\n  =}\n}\n"}}]);

@@ -1,4 +1,4 @@
-.PHONY: help format clean update
+.PHONY: help format clean update update-context update-lfdocs
 
 # Directories to exclude from context (e.g., those containing LFS or large files)
 EXCLUDE = audio-classification
@@ -11,7 +11,9 @@ help:
 	@echo "  make format         - Format all .lf files in the repository using lff"
 	@echo "  make clean          - Remove build artifacts (build, include, bin, src-gen, fed-gen)"
 	@echo "                        from all directories containing a 'src' subdirectory"
-	@echo "  make update         - Update the context files from original repositories"
+	@echo "  make update         - Run all update targets (context and lfdocs)"
+	@echo "  make update-context - Update the context files from original repositories"
+	@echo "  make update-lfdocs  - Update the lfdocs from lf-lang.github.io repository"
 	@echo ""
 
 # Format all .lf files in the repository using lff
@@ -47,8 +49,8 @@ clean:
 	done
 	@echo "Cleaning complete."
 
-# Update context by cloning lingua-franca and copying test/C directory
-update:
+# Update context by cloning lingua-franca and copying test/Python directory
+update-context:
 	@echo "======= Updating context from lingua-franca repository..."
 	@./scripts/clone_and_copy_subdir.sh https://github.com/lf-lang/lingua-franca.git test/Python context/tests
 	@echo "======= Updating context from playground-lingua-franca repository..."
@@ -64,3 +66,13 @@ update:
 		done \
 	done
 	@echo "Context update complete."
+
+# Update lfdocs by building static C docs from lf-lang.github.io
+update-lfdocs:
+	@echo "======= Updating lfdocs from lf-lang.github.io repository..."
+	@./scripts/build_lf_docs.sh
+	@echo "lfdocs update complete."
+
+# Update all: context and lfdocs
+update: update-context update-lfdocs
+	@echo "All updates complete."

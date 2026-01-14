@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkdocusaurus_classic_typescript=globalThis.webpackChunkdocusaurus_classic_typescript||[]).push([[32470],{32470:t=>{t.exports="target Rust\n\nreactor Double {\n  input x: u32\n  output y: u32\n\n  reaction(x) -> y {=\n    ctx.set(y, ctx.get(x).unwrap() * 2);\n  =}\n}\n"}}]);

@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkdocusaurus_classic_typescript=globalThis.webpackChunkdocusaurus_classic_typescript||[]).push([[23402],{23402:n=>{n.exports="target TypeScript\nreactor A {\n  input a:number\n  output out:number\n  reaction(a) -> out {=\n    out = a\n  =}\n}\nreactor B extends A {\n  input b:number\n  reaction(a, b) -> out {=\n    out = a + b\n  =}\n}\n"}}]);

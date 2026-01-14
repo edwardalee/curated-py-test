@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkdocusaurus_classic_typescript=globalThis.webpackChunkdocusaurus_classic_typescript||[]).push([[63723],{63723:t=>{t.exports="target Rust\n\nreactor Scale(factor: u32 = 2) {\n  state factor = factor\n  input x: u32\n  output y: u32\n\n  reaction(x) -> y {=\n    let x = ctx.get(x).unwrap();\n    ctx.set(y, x * self.factor);\n  =}\n}\n"}}]);
