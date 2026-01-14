@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkdocusaurus_classic_typescript=globalThis.webpackChunkdocusaurus_classic_typescript||[]).push([[96326],{96326:t=>{t.exports="target Python\n\nreactor Count {\n  state count = 0\n  output y\n  timer t(0, 100 msec)\n\n  reaction(t) -> y {=\n    y.set(self.count)\n    self.count += 1\n  =}\n}\n"}}]);

@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkdocusaurus_classic_typescript=globalThis.webpackChunkdocusaurus_classic_typescript||[]).push([[54725],{54725:n=>{n.exports="target TypeScript\n\nreactor Scale(factor: number = 2) {\n  input x: number\n  output y: number\n\n  reaction(x) -> y {=\n    if (x !== undefined) y = x * factor\n  =}\n}\n"}}]);

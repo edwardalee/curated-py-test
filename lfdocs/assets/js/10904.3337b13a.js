@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkdocusaurus_classic_typescript=globalThis.webpackChunkdocusaurus_classic_typescript||[]).push([[10904],{10904:s=>{s.exports="target TypeScript\n\nmain reactor TimeElapsed {\n  timer t(0, 1 s)\n\n  reaction(t) {=\n    console.log(`Elapsed logical time is ${util.getElapsedLogicalTime()}`)\n  =}\n}\n"}}]);

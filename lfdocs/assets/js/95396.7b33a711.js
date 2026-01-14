@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkdocusaurus_classic_typescript=globalThis.webpackChunkdocusaurus_classic_typescript||[]).push([[95396],{95396:u=>{u.exports="target TypeScript\n\nreactor Double {\n  input x: number\n  output y: number\n\n  reaction(x) -> y {=\n    y = value * 2\n  =}\n}\n"}}]);

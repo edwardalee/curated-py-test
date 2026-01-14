@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkdocusaurus_classic_typescript=globalThis.webpackChunkdocusaurus_classic_typescript||[]).push([[98074],{98074:s=>{s.exports="target Python\n\nreactor Double {\n  input x\n  output y\n\n  reaction(x) -> y {=\n    y.set(x.value * 2)\n  =}\n}\n"}}]);

@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkdocusaurus_classic_typescript=globalThis.webpackChunkdocusaurus_classic_typescript||[]).push([[99661],{99661:n=>{n.exports='target C\nreactor Inside {\n  input x: int\n  reaction(x) {=\n    printf("Received %d\\n", x->value);\n  =}\n}\nmain reactor {\n  i = new Inside()\n  reaction(startup) -> i.x {=\n    lf_set(i.x, 42);\n  =}\n}'}}]);

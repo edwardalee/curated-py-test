@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkdocusaurus_classic_typescript=globalThis.webpackChunkdocusaurus_classic_typescript||[]).push([[67543],{67543:n=>{n.exports='target Cpp {\n    timeout: 1s,\n    fast: true\n}\n\nimport Schedule from "../Schedule.lf";\nimport Count from "../Count.lf";\n\nmain reactor {\n    c = new Count();\n    d = new Schedule();\n    c.y -> d.x;\n}\n'}}]);

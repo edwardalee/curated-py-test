@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkdocusaurus_classic_typescript=globalThis.webpackChunkdocusaurus_classic_typescript||[]).push([[42695],{42695:n=>{n.exports='target Python\nreactor Inside {\n  input x\n  reaction(x) {=\n    print(f"Received {x.value}")\n  =}\n}\nmain reactor {\n  i = new Inside()\n  reaction(startup) -> i.x {=\n    i.x.set(42);\n  =}\n}'}}]);

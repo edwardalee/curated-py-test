@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkdocusaurus_classic_typescript=globalThis.webpackChunkdocusaurus_classic_typescript||[]).push([[58354],{58354:t=>{t.exports="target Rust\n\nreactor Count {\n  state count: u32 = 0\n  output y: u32\n  timer t(0, 100 msec)\n\n  reaction(t) -> y {=\n    ctx.set(y, self.count);\n    self.count += 1;\n  =}\n}\n"}}]);

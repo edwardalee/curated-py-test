@@ -12,6 +12,8 @@ This repository contains the following:
 
 * A `context` directory with many examples of Lingua Franca (LF) programs for the Python target.
 
+* An `lfdocs` directory with a snapshot of the [Lingua Franca documentation](https://lf-lang.org) re-rendered as static HTML pages. The entry point is [lfdocs/index.html](lfdocs/index.html).
+
 * A `scripts` directory with utilities used to update the context.
 
 * A `Makefile` for formatting LF files, cleaning build artifacts, and updating the context.
@@ -28,7 +30,12 @@ Run the following to update context information from the original sources:
 make update
 ```
 
-Then commit the changes.
+Then commit the changes. If you want to update only the `context` (example LF programs) or `lfdocs` (the Lingua Franca documentation), the following commands will individually perform these updates:
+
+```
+make update-context
+make update-lfdocs
+```
 
 ## Update from the Template Repo
 

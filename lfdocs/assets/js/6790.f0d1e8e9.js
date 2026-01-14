@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkdocusaurus_classic_typescript=globalThis.webpackChunkdocusaurus_classic_typescript||[]).push([[6790],{6790:s=>{s.exports='target Python\n\nmain reactor TimeElapsed {\n  timer t(0, 1 s)\n\n  reaction(t) {=\n    print(\n        f"Elapsed logical time is {lf.time.logical_elapsed()}."\n    )\n  =}\n}\n'}}]);

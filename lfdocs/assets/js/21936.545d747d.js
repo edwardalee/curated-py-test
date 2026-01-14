@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkdocusaurus_classic_typescript=globalThis.webpackChunkdocusaurus_classic_typescript||[]).push([[21936],{21936:n=>{n.exports="target Cpp\n\nreactor Double {\n  input x: int\n  output y: int\n\n  reaction(x) -> y {=\n    if (x.is_present()){\n        y.set(*x.get() * 2);\n    }\n  =}\n}\n"}}]);

@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkdocusaurus_classic_typescript=globalThis.webpackChunkdocusaurus_classic_typescript||[]).push([[12257],{12257:t=>{t.exports="target Cpp\n\nreactor Scale(factor: int(2)) {\n  input x: int\n  output y: int\n\n  reaction(x) -> y {=\n    y.set(factor * *x.get());\n  =}\n}\n"}}]);

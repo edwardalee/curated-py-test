@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkdocusaurus_classic_typescript=globalThis.webpackChunkdocusaurus_classic_typescript||[]).push([[80957],{40936:s=>{s.exports=JSON.parse('{"name":"docusaurus-theme-search-algolia","id":"default"}')}}]);

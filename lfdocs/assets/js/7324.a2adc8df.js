@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkdocusaurus_classic_typescript=globalThis.webpackChunkdocusaurus_classic_typescript||[]).push([[7324],{7324:t=>{t.exports="target TypeScript\n\nreactor MultiportSource {\n  timer t(0, 200 msec)\n  output out: number\n  state s: number = 0\n\n  reaction(t) -> out {=\n    out = s\n    s += this.getBankIndex()\n  =}\n}\n"}}]);

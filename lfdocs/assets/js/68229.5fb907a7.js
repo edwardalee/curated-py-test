@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkdocusaurus_classic_typescript=globalThis.webpackChunkdocusaurus_classic_typescript||[]).push([[68229],{68229:n=>{n.exports='target C {\n    timeout: 5 sec,\n    coordination: decentralized\n}\nimport Count, Print from "Federated.lf"\nfederated reactor {\n    c = new Count();\n    p = new Print();\n    c.out -> p.in;\n}\n'}}]);

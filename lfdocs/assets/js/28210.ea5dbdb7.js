@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkdocusaurus_classic_typescript=globalThis.webpackChunkdocusaurus_classic_typescript||[]).push([[28210],{28210:s=>{s.exports='target C\nimport Sparse from "../Sparse.lf"\nmain reactor {\n    s = new Sparse()\n    reaction(startup) -> s.in {=\n        lf_set(s.in[12], 42);\n    =}\n}'}}]);
