@@ -99,23 +99,21 @@ if [ ! -d "$SUBDIR_FULL_PATH" ]; then
     exit 1
 fi
 
-# Delete destination directory if it exists
+# Create destination directory if it doesn't exist
 if [ -d "$DEST_DIR" ]; then
-    print_info "Removing existing destination directory: $DEST_DIR"
-    rm -rf "$DEST_DIR"
+    print_info "Destination directory exists, will overwrite files: $DEST_DIR"
+else
+    print_info "Creating destination directory: $DEST_DIR"
+    mkdir -p "$DEST_DIR"
 fi
 
-# Create destination directory
-print_info "Creating destination directory: $DEST_DIR"
-mkdir -p "$DEST_DIR"
-
-# Copy subdirectory to destination
+# Copy subdirectory to destination, overwriting existing files
 print_info "Copying subdirectory '$SUBDIR_PATH' to '$DEST_DIR'"
-if cp -R "$SUBDIR_FULL_PATH/"* "$DEST_DIR/" 2>/dev/null; then
+if cp -Rf "$SUBDIR_FULL_PATH/"* "$DEST_DIR/" 2>/dev/null; then
     print_info "Copy completed successfully"
 else
     # Try alternative approach if directory is empty or has hidden files
-    if cp -R "$SUBDIR_FULL_PATH/." "$DEST_DIR/" 2>/dev/null; then
+    if cp -Rf "$SUBDIR_FULL_PATH/." "$DEST_DIR/" 2>/dev/null; then
         print_info "Copy completed successfully"
     else
         print_warning "Directory may be empty or copy may have failed"
